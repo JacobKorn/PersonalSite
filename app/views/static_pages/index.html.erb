@@ -34,12 +34,24 @@
 
 <div class="row">
 	<div class="medium-6 medium-offset-3 small-10 small-offset-1 columns end">
-		<%= render :partial => 'contacts/form' %>
+		<a href="#" data-reveal-id="contactModal" class="button expand">Contact Me</a>
 	</div>
+</div>
+
+<div id="contactModal" class="reveal-modal small" data-reveal>
+	<h2>Contact Me</h2>
+	<%= render :partial => 'contacts/form' %>
 </div>
 
 <div id="thanksModal" class="reveal-modal small" data-reveal>
 	<h2>Thank You</h2>
 	<p>Thanks for contacting me. I will get back to you as soon as possible.</p>
 </div>
+
+
+<script type="text/javascript">
+window.onload = function() {
+	<%= "contactModal();" if @contactModal %>
+};
+</script>
 

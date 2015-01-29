@@ -6,7 +6,9 @@ class ContactsController < ApplicationController
 		if @contact.save
 			redirect_to '/#thanksModal'
 		else
+			@contactModal = "farts"
 			render 'static_pages/index'
+			p @contactModal
 		end
 	end
 

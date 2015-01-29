@@ -6,15 +6,12 @@ function thanksModal() {
 	$('#thanksModal').foundation('reveal', 'open');
 };
 
+
 $(function() {
-	console.log("loaded");
 	var params = window.location.search;
 
 	if (params == "?thanksModal=true") {
 		thanksModal();
 	}
-	else if (hash == "#contactModal") {
-		contactModal();
-	};
 
 });

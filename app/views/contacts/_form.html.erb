@@ -1,37 +1,10 @@
 <%= simple_form_for @contact do |f| %>
 	
-	<div class="row collapse">
-		<div class="small-2 columns">
-			<%= f.label :name, class: 'right inline' %>
-		</div>
-		<div class="small-10 columns">
-			<%= f.input_field :name %>
-		</div>
-	</div>
+	<%= f.input :name %>
+	<%= f.input :email %>
+	<%= f.input :content, input_html: { rows: 8 } %>
+	<%= f.submit 'Contact Me', class: 'button expand' %>
 
-	<div class="row collapse">
-		<div class="small-2 columns">
-			<%= f.label :email, class: 'right inline' %>
-		</div>
-		<div class="small-10 columns">
-			<%= f.input_field :email %>
-		</div>
-	</div>
-
-	<div class="row collapse">
-		<div class="small-2 columns">
-			<%= f.label :content, class: 'right inline' %>
-		</div>
-		<div class="small-10 columns">
-			<%= f.input_field :content %>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="small-10 small-offset-1 columns end">
-			<%= f.submit 'Contact Me', class: 'button expand' %>
-		</div>
-	</div>
 <% end %>
 
 

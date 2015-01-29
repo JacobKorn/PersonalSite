@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 
 		if @contact.save
-			redirect_to '/#thanksModal', notice: "Thank you for contacting me. I will be in touch shortly."
+			redirect_to '/#thanksModal'
 		else
 			render 'static_pages/index'
 		end

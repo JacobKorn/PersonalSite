@@ -1,9 +1,17 @@
+function contactModal() {
+	$('#contactModal').foundation('reveal', 'open');
+};
+
+function thanksModal() {
+	$('#thanksModal').foundation('reveal', 'open');
+};
+
+
 $(function() {
+	var params = window.location.search;
 
-	var hash = window.location.hash;
-
-	if (hash == "#thanksModal") {
-		$('#thanksModal').foundation('reveal', 'open');
-	};
+	if (params == "?thanksModal=true") {
+		thanksModal();
+	}
 
 });

@@ -24,7 +24,7 @@
 <div class="row paragraph-row">
 	<div class="large-5 large-offset-1 medium-5 medium-offset-1 small-10 small-offset-1 columns">
 		<p>Hi I'm Anthony. I've recently joined the world of web development and am looking for my first big break!</p>
-		<p>I love technology, music, snowboading and working in social environments.</p>
+		<p>I love technology, music, snowboarding and working in social environments.</p>
 	</div>
 	<div class="large-5 large-offset-0 medium-5 medium-offset-0 small-10 small-offset-1 columns end">
 		<p>My current goal is to learn as much as possible as quickly as possible and to contribute in a team.</p> 
@@ -34,12 +34,24 @@
 
 <div class="row">
 	<div class="medium-6 medium-offset-3 small-10 small-offset-1 columns end">
-		<%= render :partial => 'contacts/form' %>
+		<a href="#" data-reveal-id="contactModal" class="button expand">Contact Me</a>
 	</div>
+</div>
+
+<div id="contactModal" class="reveal-modal small" data-reveal>
+	<h2>Contact Me</h2>
+	<%= render :partial => 'contacts/form' %>
 </div>
 
 <div id="thanksModal" class="reveal-modal small" data-reveal>
 	<h2>Thank You</h2>
 	<p>Thanks for contacting me. I will get back to you as soon as possible.</p>
 </div>
+
+
+<script type="text/javascript">
+	window.onload = function() {
+		<%= "contactModal();" if @contactModal %>
+	};
+</script>
 

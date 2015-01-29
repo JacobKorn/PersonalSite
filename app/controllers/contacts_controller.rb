@@ -4,9 +4,12 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 
 		if @contact.save
-			redirect_to '/#thanksModal'
+			@thanksModal = true
+			@contact = Contact.new
+			# render 'static_pages/index'
+			redirect_to root_path( thanksModal: true)
 		else
-			@contactModal = "farts"
+			@contactModal = true
 			render 'static_pages/index'
 			p @contactModal
 		end

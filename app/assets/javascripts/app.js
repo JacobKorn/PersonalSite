@@ -8,9 +8,9 @@ function thanksModal() {
 
 $(function() {
 	console.log("loaded");
-	var hash = window.location.hash;
+	var params = window.location.search;
 
-	if (hash == "#thanksModal") {
+	if (params == "?thanksModal=true") {
 		thanksModal();
 	}
 	else if (hash == "#contactModal") {
